@@ -1,0 +1,1 @@
+nohup swift run > host.log 2>&1 &
