@@ -11,9 +11,7 @@ public func configure(_ app: Application) throws {
 
 public func runCMD(host: String) ->Int32{
     
-    let cmds = """
- /root/\(host)/x-bot/MENG
-"""
+    let cmds = "/root/\(host)/x-bot/MENG"
     
     
    return shellFunc(cmds)
