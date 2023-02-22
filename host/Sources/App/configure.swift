@@ -9,11 +9,11 @@ public func configure(_ app: Application) throws {
     try routes(app)
 }
 
-public func runCMD(host: String) ->Int32{
-    
-    let cmds = "/root/\(host)/x-bot/MENG"
-    
-    
+public func runCMD(host: String) ->Int32 {
+    var cmds = "/root/\(host)/x-bot/MENG"
+    if host.contains("rn") {
+        cmds = "/root/\(host)/MENG"
+    }
    return shellFunc(cmds)
 }
 
