@@ -11,7 +11,7 @@ func routes(_ app: Application) throws {
     
     app.get("runcmd",":cmd") { req async -> Int32 in
         let name = req.parameters.get("cmd") ?? ""
-       return shellFunc(name)
+       return runCMD(shell: name)
 //       return "Hello, world!"
     }
 }

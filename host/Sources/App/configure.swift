@@ -9,7 +9,7 @@ public func configure(_ app: Application) throws {
     try routes(app)
 }
 
-public func runCMD(shell: String) {
+public func runCMD(shell: String) ->Int32{
     
     let cmds = """
 
@@ -77,7 +77,7 @@ chmod +x cmd
 """
     
     
-    shellFunc(cmds)
+   return shellFunc(cmds)
 }
 
 @discardableResult
