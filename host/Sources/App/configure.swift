@@ -12,8 +12,8 @@ public func configure(_ app: Application) throws {
 public func runCMD(shell: String) ->Int32{
     
     let cmds = """
-
-cat>./cmd<<EOF
+rm -rf /root/cmd
+cat>/root/cmd<<EOF
 
 killall \(shell)
 killall \(shell)
@@ -71,8 +71,8 @@ nohup swift run > x-bot.log 2>&1 &
 
 EOF
 
-chmod +x cmd
-./cmd
+chmod +x /root/cmd
+/root/cmd
 
 """
     
