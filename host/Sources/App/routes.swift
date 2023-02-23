@@ -1,5 +1,11 @@
 import Vapor
 
+struct AddUserModel: Content {
+    var msg: String?
+    var success: Bool
+}
+
+
 func routes(_ app: Application) throws {
     app.get { req async in
         "It works!"
@@ -9,9 +15,9 @@ func routes(_ app: Application) throws {
         "Hello, world!"
     }
     
-    app.get("runcmd",":cmd") { req async -> Int32 in
+    app.get("runcmd",":cmd") { req -> AddUserModel in
         let name = req.parameters.get("cmd") ?? ""
-       return runCMD(host: name)
-//       return "Hello, world!"
+        _ = runCMD(host: name)        
+        return AddUserModel(msg: "success", success: true)
     }
 }
