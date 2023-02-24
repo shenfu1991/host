@@ -27,6 +27,6 @@ func shellFunc(_ args: String...) -> Int32 {
     task.launchPath = "/usr/bin/env"
     task.arguments = args
     task.launch()
-    task.waitUntilExit()
+//    task.exit
     return task.terminationStatus
 }
