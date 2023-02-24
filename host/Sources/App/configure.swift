@@ -28,5 +28,6 @@ func shellFunc(_ args: String...) -> Int32 {
     task.arguments = args
     task.launch()
 //    task.exit
-    return task.terminationStatus
+//    return task.terminationStatus
+    return 0
 }

