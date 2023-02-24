@@ -10,15 +10,15 @@ public func configure(_ app: Application) throws {
 }
 
 public func runCMD(host: String) ->Int32 {
-    var cmds = "/root/\(host)/x-bot/MENG & exit 0"
+    var cmds = "/root/\(host)/x-bot/MENG"
     if host.contains("rn") {
-        cmds = "/root/\(host)/MENG & exit 0"
+        cmds = "/root/\(host)/MENG"
     }
    return shellFunc(cmds)
 }
 
 public func update() {
-  shellFunc("/root/host/host/go & exit 0")
+  shellFunc("/root/host/host/go")
 }
 
 @discardableResult
