@@ -17,6 +17,10 @@ public func runCMD(host: String) ->Int32 {
    return shellFunc(cmds)
 }
 
+public func update() {
+  shellFunc("/root/host/host/go")
+}
+
 @discardableResult
 func shellFunc(_ args: String...) -> Int32 {
     let task = Process()

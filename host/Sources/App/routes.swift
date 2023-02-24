@@ -20,4 +20,9 @@ func routes(_ app: Application) throws {
         _ = runCMD(host: name)        
         return AddUserModel(msg: "success", success: true)
     }
+    
+    app.get("update") { req -> AddUserModel in
+        update()
+        return AddUserModel(msg: "success", success: true)
+    }
 }
